@@ -1,0 +1,12 @@
+[Unit]
+Description=Fruit & Veg Python App
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/fruits-veg_market/java
+ExecStart=mvn spring-boot:run -Dspring-boot.run.arguments="--server.address=0.0.0.0 --server.port=9090" 
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
