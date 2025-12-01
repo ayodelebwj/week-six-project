@@ -10,7 +10,7 @@ source "amazon-ebs" "web-vm-template-root" {
   region          = "us-east-2"
   instance_type   = "t3.micro"
   ssh_username    = "ubuntu"
-  source_ami    = data.amazon-parameterstore.web_ubuntu_2404.value
+  source_ami      = data.amazon-parameterstore.web_ubuntu_2404.value
   ami_name        = "web-ami"
   ami_description = "Amazon Linux 2 custom AMI with java and python"
 }
